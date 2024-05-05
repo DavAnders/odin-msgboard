@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Please fill in the form to post a new message.
+  
+  form(method='POST', action='/new')
+    div
+      label(for='user') Name:
+      input#user(type='text', name='user', required=true)
+    div
+      label(for='message') Message:
+      textarea#message(name='message', required=true)
+    div
+      input(type='submit', value='Post Message')
